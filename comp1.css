@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+}
+
+.div1{
+    width: 30vw;
+    height: 100vh;   
+}
+
+img{
+    position: fixed;  
+    width: 30%;
+    height: 100%;
+}
+
+.div2{
+    flex: 1;
+}
+
+.sign-in{
+    display: flex;
+    justify-content: flex-end;
+    margin:1.5rem 2rem;
+    gap: .1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.signup-container{
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* form stying */
+
+.p-top{
+    font-size: 1rem;
+}
+
+.inputs{
+    background-color:rgba(0, 0, 0, 0.073);
+    border-radius: 8px;
+}
+
+.submit-btn{
+    border: none;
+    width: 12rem;
+    height: 2.5rem;
+    background-color: rgb(255, 7, 123);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.p-down{
+    font-size: .8rem;
+}
+
+.errMsg{
+    color: red;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; 
+    }
+}
