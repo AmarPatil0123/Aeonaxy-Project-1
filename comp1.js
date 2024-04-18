@@ -18,21 +18,17 @@
 //custom validation
 
 document.addEventListener("DOMContentLoaded", () => {
-  function checkUsername() {
+  const submit = document.querySelector(".submit-btn");
+  submit.addEventListener("click", (event) => {
     const fName = document.querySelector(".name");
     const userName = document.querySelector(".username");
     const errMsg = document.querySelector(".errMsg");
-    const submit = document.querySelector(".submit-btn");
 
-    submit.addEventListener("click", (event) => {
-      if (fName.value === userName.value && fName.value && userName.value !== "") {
-        errMsg.style.display = "block";
-        event.preventDefault();
-      } else {
-        errMsg.style.display = "none";
-      }
-    });
-  }
-
-  checkUsername(); 
+    if (fName.value === userName.value && fName.value && userName.value !== "") {
+      errMsg.style.display = "block";
+      event.preventDefault();
+    } else {
+      errMsg.style.display = "none";
+    }
+  });
 });
