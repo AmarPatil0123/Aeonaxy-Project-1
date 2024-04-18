@@ -24,9 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const errMsg = document.querySelector(".errMsg");
     const submit = document.querySelector(".submit-btn");
 
-    submit.addEventListener("click", () => {
+    submit.addEventListener("click", (event) => {
       if (fName.value === userName.value && fName.value && userName.value !== "") {
         errMsg.style.display = "block";
+        event.preventDefault();
       } else {
         errMsg.style.display = "none";
       }
